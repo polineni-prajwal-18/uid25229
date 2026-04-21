@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logic Programs - All in One</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 50px;
+            background-color: rgb(144, 238, 232);
+        }
+        .box {
+            border: 2px solid black;
+            display: inline-block;
+            padding: 30px;
+            border-radius: 20px;
+            background-color: white;
+            width: 450px;
+            
+        }
+        input {
+            padding: 10px;
+            font-size: 14px;
+            border: 2px black solid;
+            border-radius: 5px;
+            width: 90%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        button {
+            padding: 12px;
+            font-size: 14px;
+            background-color: rgb(84, 84, 250);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: italic;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+        #result {
+            margin-top: 20px;
+            color: #333;
+            min-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <p>Name = prajwal , Roll no = 25229 , Section-C</p>
+    <div class="box">
+        <h1>Logic Programs</h1>
+        <input type="number" id="num" placeholder="Enter number">
+
+        <div class="grid">
+            <button onclick="checkEvenOdd()">Even / Odd</button>
+            <button onclick="checkPrime()">Prime / Not</button>
+            <button onclick="calcFactorial()">Factorial</button>
+            <button onclick="checkArmstrong()">Armstrong</button>
+        </div>
+
+        <i><h2><p id="result"></p></h2></i>
+    </div>
+
+    <script>
+        function checkEvenOdd() {
+            let n = document.getElementById("num").value;
+            if (n === "") return;
+            let msg = (n % 2 == 0) ? n + " is Even" : n + " is Odd";
+            document.getElementById("result").innerHTML = msg;
+        }
+
+        function checkPrime() {
+            let n = document.getElementById("num").value;
+            if (n === "" || n < 2) {
+                document.getElementById("result").innerHTML = n + " is Not Prime";
+                return;
+            }
+            let isPrime = true;
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) { 
+                    isPrime = false; break;
+                }
+            }
+            document.getElementById("result").innerHTML = isPrime ? n + " is Prime" : n + " is Not Prime";
+        }
+
+        function calcFactorial() {
+            let n = document.getElementById("num").value;
+            if (n === "" || n < 0) return;
+            let f = 1;
+            for (let i = 1; i <= n; i++) f *= i;
+            document.getElementById("result").innerHTML = "Factorial is: " + f;
+        }
+
+        function checkArmstrong() {
+            let n = document.getElementById("num").value;
+            let k = n;
+            let s = 0;
+            let p = n.toString().length;
+            
+            let temp = n;
+            while (temp > 0) {
+                let r = temp % 10;
+                s = s + Math.pow(r, p);
+                temp = Math.floor(temp / 10);
+            }
+            
+            if (s == k)
+                document.getElementById("result").innerHTML = k + " is Armstrong";
+            else
+                document.getElementById("result").innerHTML = k + " is Not Armstrong";
+        }
+    </script>
+
+</body>
+</html>
