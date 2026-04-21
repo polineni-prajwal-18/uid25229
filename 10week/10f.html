@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script>
+            let s1 = parseInt(prompt("Enter marks of Subject 1:"));
+            let s2 = parseInt(prompt("Enter marks of Subject 2:"));
+            let s3 = parseInt(prompt("Enter marks of Subject 3:"));
+            let s4 = parseInt(prompt("Enter marks of Subject 4:"));
+            let s5 = parseInt(prompt("Enter marks of Subject 5:"));
+            let s6 = parseInt(prompt("Enter marks of Subject 6:"));
+
+            let total = s1 + s2 + s3 + s4 + s5 + s6;
+            let avg = total / 6;
+
+           if(avg >= 90){
+                document.write("Grade: A");
+            }else if(avg >= 80){
+                document.write("Grade: B");
+            }else if(avg >= 70){
+                document.write("Grade: C");
+            }else if(avg >= 60){
+                document.write("Grade: D");
+            }else{
+                document.write("Grade: F");
+            }
+
+        </script>
+    </head>
+</html>

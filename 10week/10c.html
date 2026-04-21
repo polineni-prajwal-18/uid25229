@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            align-items: center;
+            justify-self: center;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 15%;
+            background-color: #5275f5;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <button onclick="findLargest()" class="button">Enter Numbers</button>
+
+<script>
+    function findLargest() {
+        const n1 = parseFloat(prompt("Enter number 1:"));
+        const n2 = parseFloat(prompt("Enter number 2:"));
+        const n3 = parseFloat(prompt("Enter number 3:"));
+        const n4 = parseFloat(prompt("Enter number 4:"));
+        const n5 = parseFloat(prompt("Enter number 5:"));
+        let largest = n1;
+        if (n2 > largest) {
+            largest = n2;
+        }
+        if (n3 > largest) {
+            largest = n3;
+        }
+        if (n4 > largest) {
+            largest = n4;
+        }
+        if (n5 > largest) {
+            largest = n5;
+        }
+        alert("The largest number is: " + largest);
+    }
+</script>
+
+</body>
+</html>

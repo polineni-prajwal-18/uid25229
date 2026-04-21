@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            align-items: center;
+            justify-self: center;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 15%;
+            background-color: #5275f5;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="checkSign()" class="button">Check Product Sign</button>
+    <script>
+    function checkSign() {
+        let n1, n2, n3;
+        n1 = parseFloat(prompt("Enter number 1:"));
+        n2 = parseFloat(prompt("Enter number 2:"));
+        n3 = parseFloat(prompt("Enter number 3:"));
+        let product = n1 * n2 * n3;
+        if (product > 0) {
+            alert("The sign is plus");
+        } else if (product < 0) {
+            alert("The sign is minus");
+        } else if (product === 0) {
+            alert("The product is zero");
+        } else {
+            alert("Invalid input detected.");
+        }
+    } 
+</script>
+
+</body>
+</html>

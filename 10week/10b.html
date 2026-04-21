@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sort Three Numbers</title>
+    <style>
+        body{
+            align-items: center;
+            justify-self: center;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 15%;
+            background-color: #5275f5;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <button onclick="sortNumbers()" class="button">Sort Numbers</button>
+
+<script>
+    function sortNumbers() {
+        const n1 = parseFloat(prompt("Enter first number:"));
+        const n2 = parseFloat(prompt("Enter second number:"));
+        const n3 = parseFloat(prompt("Enter third number:"));
+        if (n1 >= n2 && n1 >= n3) {
+            if (n2 >= n3) {
+                alert(n1 + ", " + n2 + ", " + n3);
+            } else {
+                alert(n1 + ", " + n3 + ", " + n2);
+            }
+        } 
+        else if (n2 >= n1 && n2 >= n3) {
+            if (n1 >= n3) {
+                alert(n2 + ", " + n1 + ", " + n3);
+            } else {
+                alert(n2 + ", " + n3 + ", " + n1);
+            }
+        } 
+        else if (n3 >= n1 && n3 >= n2) {
+            if (n1 >= n2) {
+                alert(n3 + ", " + n1 + ", " + n2);
+            } else {
+                alert(n3 + ", " + n2 + ", " + n1);
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
