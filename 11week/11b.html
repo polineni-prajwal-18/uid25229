@@ -1,0 +1,23 @@
+Name = prajwal polineni , Roll no = 25229 , Section-C
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Email:</h2>
+    <input type="text" id="mail" placeholder="Enter email">
+    <br><br>        
+    <button onclick="email()">Verify</button>
+    <p id="result" style="font-weight: bold;"></p>
+    <script>
+        function email() {
+            let pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (pattern.test(document.getElementById("mail").value)) {
+                document.getElementById("result").innerHTML = "Valid Email Format";
+                document.getElementById("result").style.color = "green";
+            } else {
+                document.getElementById("result").innerHTML = "Invalid Email Format";
+                document.getElementById("result").style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

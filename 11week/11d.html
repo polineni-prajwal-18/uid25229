@@ -1,0 +1,22 @@
+Name = prajwal polineni , Roll no = 25229 , Section-C
+<!DOCTYPE html>
+<html>
+<body>
+    <h3>Enter Mobile Number:</h3>
+    <input type="text" id="mobile" onkeypress="Mobilenumber()">
+    <p id="msg"></p>
+    <script>
+        function Mobilenumber() {
+        let mobile = document.getElementById("mobile").value;
+        let pattern = /^[0-9]{10}$/;
+        if (!mobile.match(pattern)) {
+            document.getElementById("msg").innerHTML = "Enter a valid 10-digit mobile number";
+            document.getElementById("msg").style.color = "red";
+        } else {
+            document.getElementById("msg").innerHTML = "Valid mobile number";
+            document.getElementById("msg").style.color = "green";
+        }
+    }
+    </script>
+</body>
+</html>
